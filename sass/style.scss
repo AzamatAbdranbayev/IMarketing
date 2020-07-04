@@ -1,0 +1,13 @@
+body {
+    font-family: Poppins, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin: 0;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+a {
+    text-decoration: none;
+}
+@import "variables";
+@import "header";
