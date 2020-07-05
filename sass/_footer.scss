@@ -1,0 +1,134 @@
+.footer {
+    &__wrapper {
+        border-top: 1px solid rgba(188, 208, 229, 0.496913);
+        padding: 10% 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }  
+    &__title {
+        font-family:'Geometria';
+        @include text-style (bold,20px,30px,#2F281E);
+        margin: 0 0 35px 0;
+        max-width: 280px;
+    }
+    &__link{
+        @include text-style (normal,16px,35px,#544837);
+    }
+    &__link:hover {
+        text-shadow: 2px 2px 3px #FF9900;
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+    }
+    &__btn {
+        padding: 10px 0 10px 15px;
+        background: #FFFFFF;
+        border: 1px solid #BCD0E5;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin-bottom: 21px;
+        max-width: 325px;
+    }
+    &__btn:active,:hover,:focus{
+        outline: none;
+    }
+    &__submit{
+        width: 131px;
+        background: #FF9900;
+        border-radius: 4px;
+        padding: 8px 0 7px 0;
+        border:none;
+        @include text-style (bold,16px,24px,#ffffff);
+        text-align: center;
+        margin: 0;
+    }
+    &__submit:hover{
+        animation: submit_active 0.8s linear infinite alternate;
+    }
+    &__logo:hover{
+        opacity: 0.5;
+    }
+    
+ 
+}
+::-webkit-input-placeholder {@include text-style (normal,16px,28px,#BCD0E5)}
+::-moz-placeholder          {@include text-style (normal,16px,28px,#BCD0E5)}/* Firefox 19+ */
+:-moz-placeholder           {@include text-style (normal,16px,28px,#BCD0E5)}/* Firefox 18- */
+:-ms-input-placeholder      {@include text-style (normal,16px,28px,#BCD0E5)}
+
+@keyframes submit_active {
+    0% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+   
+}
+@media screen and(min-width:320px){
+    .footer{
+        &__col {
+            display: flex;
+            flex-direction: column;
+           
+            margin-bottom: 20px;
+            &--log {
+                flex-basis: 100%;
+                justify-content: flex-start;
+            }
+            &--links {
+                flex-basis: 50%;
+            }
+            &--forms {
+                flex-basis: 50%;
+               
+            }
+            &--mg--auto {
+                margin-top: auto;
+            }
+        }
+        &__logo {
+            align-self: center;
+        }
+        &__logo_link {
+            width: 80%;
+            display: block;
+        } 
+    }
+    
+} 
+@media screen and (min-width:600px) {
+    .footer {
+        &__col {
+            &--forms {
+                margin: 0 auto;
+            }
+        }
+    }
+    
+}
+@media screen and(min-width:900px){
+    .footer {
+        &__col {
+            &--log {
+                flex-basis: 15%;
+            }
+            &--links {
+                flex-basis: 16%;
+            }
+            &--forms {
+                flex-basis: 28%;
+                flex-grow: 0;
+                margin: 0;
+            }
+        }
+        &__logo_link {
+            width: 100%;
+        } 
+    
+    }
+    
+}

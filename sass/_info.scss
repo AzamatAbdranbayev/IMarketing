@@ -38,15 +38,15 @@
         @include text-style (bold,16px,24px, #ffffff);
     }
     &__btn:hover > &__btn_text {
-        animation: cool 0.5s linear infinite alternate;
+        animation: cool_info 0.3s linear infinite alternate;
     } 
 }
-@keyframes cool  {
+@keyframes cool_info  {
     0% {
         transform: scale(1);
     }
     100% {
-        transform: scale(1.2);
+        transform: scale(1.3);
     }
 }
 
